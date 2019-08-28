@@ -29,7 +29,7 @@ namespace Sparkassignment.Pages
         ExtentHtmlReporter r1;
         AventStack.ExtentReports.ExtentReports extent;
         ExtentTest test;
-
+ 
         [OneTimeSetUp]
         public void setReports()
         {
@@ -49,6 +49,7 @@ namespace Sparkassignment.Pages
             setUp(browser);
             driver.Url = Constants.URL;
             test = extent.CreateTest("shoppingMethod");
+            //Create Objects from classes Home and Sign In and Pass the driver to it
             Home h1 = new Home(driver);
             SignIn s1 = new SignIn(driver);
             h1.clickSignIn();
